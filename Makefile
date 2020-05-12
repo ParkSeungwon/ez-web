@@ -5,6 +5,7 @@ all :
 	incltouch.x
 	make $(OPTION) -C tcpip/
 	make $(OPTION) -C src/
+	make $(OPTION) -C database/
 	make $(OPTION) -C obj/
 
 clean :
