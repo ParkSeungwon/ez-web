@@ -4,7 +4,6 @@ OPTION = -j 3
 all : 
 	incltouch.x
 	make $(OPTION) -C tcpip/
-	make $(OPTION) -C database/
 	make $(OPTION) -C src/
 	make $(OPTION) -C obj/
 
