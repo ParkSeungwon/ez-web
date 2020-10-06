@@ -84,7 +84,6 @@ https://localhost:4433 을 임의의 브라우저로 접근해 보십시오.
 </p>
 				</div>
 				<div class = 'w3-panel w3-card w3-light-grey'>
-
 <font size=+1>
 		<pre>
 Directory Structure
@@ -109,6 +108,36 @@ Developers just need to touch two directories that is 'src' and 'www'.
 src 디렉토리는 서버측 프로그래밍을 위한 소스들이 들어갈 자리입니다.
 www 디렉토리는 웹 페이지를 위한 템플릿이 들어갈 자리입니다.
 </p>
+				</div>
+				<div class = 'w3-panel w3-card w3-light-grey'>
+					<p class=kor>
+					루트 디렉토리에 eZ.conf라는 파일이 있다.
+					이 파일은 서브 도메인에 따라 미들 서버가 연결할 주소를 정의한다.
+					</p>
+					<p class=eng>
+					There is a file named eZ.conf in the root directory.
+					This file defines subdomain to which the middle server will connect.
+					</p>
+					<pre class=bash>
+					default localhost 2001
+					dndd localhost 2001
+					ez 192.168.0.14 2001
+					www 192.168.0.14 2002
+					</pre>
+					<p class=eng>
+					First column defines subdomain name.
+					In case of www.zeta2374.com, it is www.
+					Second column is the ip address in the Local Area Network.
+					Third column is the port number.
+					According to this configuration, the middle server will distribute the connections
+					to appropriate web servers.
+					</p>
+					<p class=kor>
+					첫번째 컬럼은 서브 도메인의 이름이다. www.zeta2374.com 의 경우 www 이다.
+					두번째 컬럼은 LAN상의 IP 주소이다.
+					세번째 컬럼은 포트 번호이다.
+					이 설정 파일에 따라서, 미들 서버는 적절한 웹서버에 연결을 배분할 것이다.
+					</p>
 				</div>
 			</div>	
 
